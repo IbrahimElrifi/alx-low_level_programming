@@ -1,12 +1,8 @@
-/*
- *a c programme thats uses puts funtion to print a string
- *
- *
- *
- *
- */
-
 #include <stdio.h>
+/**
+ * main -Entry point
+ * Return: 0 (Succes)
+ */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
