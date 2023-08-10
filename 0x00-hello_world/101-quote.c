@@ -5,6 +5,8 @@
  */
 int main(void)
 {
-	fprintf(stderr, "and that piece of art is useful\"- Dora Korpar, 2015-10-19");
+	char name[] = "Dora Korpar";
+
+	fprintf(stderr, "and that piece of art is useful\" - %s, 2015-10-19", name);
 	return (1);
 }
