@@ -1,5 +1,5 @@
 #include <stdio.h>
-main() {
+int main() {
 puts("rogramming is like building a multilingual puzzle");
-return ();
+return (0);
 }
