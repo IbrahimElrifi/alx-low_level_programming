@@ -10,15 +10,12 @@ void print_alphabet_x10(void)
 	char lowercase;
 	int i;
 
-	i = 0;
-
-while (i < 10)
+for (i = 0; i < 10; i++)
 {
 	for (lowercase = 'a' ; lowercase <= 'z' ; lowercase++)
 	{
 		_putchar(lowercase);
 	}
-	i++;
 	_putchar('\n');
 }
 }
