@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabetx10- Entry point
+ * print_alphabet_x10 - Entry point
  * Return: Always void
  */
 
@@ -9,6 +9,7 @@ void print_alphabet_x10(void)
 {
 	char lowercase;
 	int i;
+
 	i = 0;
 
 while (i < 10)
@@ -19,6 +20,5 @@ while (i < 10)
 	}
 	i++;
 	_putchar('\n');
-	
 }
 }
