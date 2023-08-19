@@ -6,7 +6,7 @@
  * Return: a number of diagonal lines according to n
  */
 
-void print_diagonal(int n)
+void print_line(int n)
 {
 	char l = '_';
 	int i;
