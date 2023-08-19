@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_diagonal - print diagonal lines
+ * print_line - print lines
  * @n: integer number
- * Return: a number of diagonal lines according to n
+ * Return: a number of lines according to n
  */
 
 void print_line(int n)
