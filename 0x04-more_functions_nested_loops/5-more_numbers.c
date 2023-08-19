@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_most_numbers - print numbers from 0 to 9 except 2 and 4
- * Return: numbers 0 to 9 except 2 and 4
+ * more_numbers - print numbers from 0 to 14 ,10 times
+ * Return: print 10 lines of numbers 0 to 14
  */
 
 void more_numbers(void)
