@@ -28,5 +28,6 @@ int main(void)
 		printf("%d%c", i, ' ');
 		}
 	}
+	printf("\n");
 	return (0);
 }
