@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _puts - print string.
+ * print_rev - revers a string.
  *
- *@str: a pointer
+ *@s: a pointer
  *
- *Return: .
+ *Return: nothing
  */
 
 void print_rev(char *s)
