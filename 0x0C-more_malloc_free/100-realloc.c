@@ -1,29 +1,50 @@
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
 /**
- * array_range - Creates an array of integers ordered
- *               from min to max, inclusive.
- * @min: The first value of the array.
- * @max: The last value of the array.
- * Return: If min > max or the function fails - NULL.
- *         Otherwise - a pointer to the newly created array.
+ * _realloc - reallocates a memory block using malloc and free
+ * @ptr: pointer to the memory previously allocated with a call
+ * to malloc i.e. malloc(old_size)
+ * @old_size: the size of the allocated space for ptr
+ * @new_size: the new size of the new memory block
+ * Return: if new_size > old_size, added memory should not be initialised
+ * if new_size == old_size, return ptr
+ * if ptr is NULL call == malloc(new_size) for all values of old and new size
+ * if new_size=0 && ptr != NULL, call = free(ptr) and Return NULL
  */
-int *array_range(int min, int max)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	int *array, index, size;
+	char *ptr1, *old_ptr;
+	unsigned int i;
 
-	if (min > max)
+	if (new_size == old_size)
+		return (ptr);
+
+	if (new_size == 0 && ptr != NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
+
+	if (ptr == NULL)
+		return (malloc(new_size));
+	ptr1 = malloc(new_size);
+
+	if (!ptr1)
 		return (NULL);
 
-	size = max - min + 1;
+	old_ptr = ptr;
 
-	array = malloc(sizeof(int) * size);
+	if (new_size < old_size)
+	{
+		for (i = 0; i < new_size; i++)
+			ptr1[i] = old_ptr[i];
+	}
 
-	if (array == NULL)
-		return (NULL);
-
-	for (index = 0; index < size; index++)
-		array[index] = min++;
-
-	return (array);
+	if (new_size > old_size)
+	{
+		for (i = 0; i < old_size; i++)
+			ptr1[i] = old_ptr[i];
+	}
+	free(ptr);
+	return (ptr1);
 }
